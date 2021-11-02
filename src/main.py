@@ -17,7 +17,7 @@ options.add_argument("lang=ko_KR")
 options.add_argument("log-level=3")
 options.add_argument("headless")
 
-driver = webdriver.Chrome("D:/repos/parse_theborn/chromedriver.exe", options=options)
+driver = webdriver.Chrome("chromedriver.exe", options=options)
 driver.get("https://www.theborn.co.kr/store/domestic-store/")
 
 select = Select(driver.find_element_by_xpath('//*[@id="select_brand"]'))
