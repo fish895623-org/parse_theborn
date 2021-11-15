@@ -40,12 +40,6 @@ object Build : BuildType({
 
     steps {
         dockerCommand {
-            commandType = other {
-                subCommand = "run"
-                commandArgs = "-v %teamcity.build.workingDir%:/workspace %env.TEAMCITY_PROJECT_NAME%:%build.counter%"
-            }
-        }
-        dockerCommand {
             name = "build Docker"
             commandType = build {
                 source = file {
@@ -56,6 +50,12 @@ object Build : BuildType({
                 commandArgs = "--pull"
             }
             param("dockerImage.platform", "linux")
+        }
+        dockerCommand {
+            commandType = other {
+                subCommand = "run"
+                commandArgs = "-v %teamcity.build.workingDir%:/workspace %env.TEAMCITY_PROJECT_NAME%:%build.counter%"
+            }
         }
     }
 
