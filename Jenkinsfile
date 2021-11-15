@@ -5,6 +5,8 @@ pipeline {
       agent any
       steps {
         // Testing
+        checkout scm
+        sh "ls -alh"
         sh "echo abcd
             echo twooooo"
       }
