@@ -42,6 +42,7 @@ object Build : BuildType({
         dockerCommand {
             commandType = other {
                 subCommand = "run"
+                commandArgs = "-v %teamcity.build.workingDir%:/workspace"
             }
         }
     }
