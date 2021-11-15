@@ -7,8 +7,7 @@ pipeline {
         // Testing
         checkout scm
         sh "ls -alh"
-        sh "echo abcd
-            echo twooooo"
+        sh "echo abcd"
       }
     }
   }
