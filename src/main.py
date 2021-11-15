@@ -18,9 +18,9 @@ options.add_argument("log-level=3")
 options.add_argument("headless")
 
 if sys.platform == 'win32':
-    driver = webdriver.Chrome("chromedriver.exe", options=options)
+    driver = webdriver.Chrome("./chromedriver.exe", options=options)
 else:
-    driver = webdriver.Chrome('chromedriver', options=options)
+    driver = webdriver.Chrome('./chromedriver', options=options)
 
 driver.get("https://www.theborn.co.kr/store/domestic-store/")
 
