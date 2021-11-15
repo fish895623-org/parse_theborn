@@ -45,6 +45,18 @@ object Build : BuildType({
                 commandArgs = "-v %teamcity.build.workingDir%:/workspace %env.TEAMCITY_PROJECT_NAME%:%build.counter%"
             }
         }
+        dockerCommand {
+            name = "build Docker"
+            commandType = build {
+                source = file {
+                    path = "Dockerfile"
+                }
+                contextDir = "."
+                namesAndTags = "%env.TEAMCITY_PROJECT_NAME%:%build.counter%"
+                commandArgs = "--pull"
+            }
+            param("dockerImage.platform", "linux")
+        }
     }
 
     triggers {
