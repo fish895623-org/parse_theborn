@@ -4,7 +4,9 @@ pipeline {
     stage('Testing') {
       agent any
       steps {
-        sh 'echo abcd'
+        // Testing
+        sh "echo abcd
+            echo twooooo"
       }
     }
   }
