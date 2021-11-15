@@ -1,5 +1,8 @@
 FROM python:3.8
 
 WORKDIR /workspace
-COPY requirements.txt /workspace/requirements.txt
+COPY * /workspace
 RUN pip install -r /workspace/requirements.txt
+RUN chmod +x /workspace/chromedriver
+
+CMD ["python3 src/main.py"]
