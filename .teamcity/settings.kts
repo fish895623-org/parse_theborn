@@ -54,7 +54,7 @@ object Build : BuildType({
         dockerCommand {
             commandType = other {
                 subCommand = "run"
-                commandArgs = "--rm -v %env.TEAMCITY_PROJECT_NAME%:%build.counter% python3 src/main.py"
+                commandArgs = "--rm -v %teamcity.build.workingDir%:/workspace %env.TEAMCITY_PROJECT_NAME%:%build.counter% python3 src/main.py"
             }
         }
     }
