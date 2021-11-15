@@ -1,14 +1,14 @@
 # %%
+import json
+import sys
+from collections import OrderedDict
 from time import sleep
 
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import Select
 
-import json
-from collections import OrderedDict
-
-#%%
+# %%
 options = webdriver.ChromeOptions()
 
 options.add_argument("no-sandbox")
@@ -17,7 +17,11 @@ options.add_argument("lang=ko_KR")
 options.add_argument("log-level=3")
 options.add_argument("headless")
 
-driver = webdriver.Chrome("chromedriver.exe", options=options)
+if sys.platform == 'win32':
+    driver = webdriver.Chrome("chromedriver.exe", options=options)
+else:
+    driver = webdriver.Chrome('chromedriver', options=options)
+
 driver.get("https://www.theborn.co.kr/store/domestic-store/")
 
 select = Select(driver.find_element_by_xpath('//*[@id="select_brand"]'))
