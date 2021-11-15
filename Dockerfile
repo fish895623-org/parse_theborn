@@ -5,4 +5,4 @@ COPY ./ /workspace
 RUN pip install -r /workspace/requirements.txt
 RUN chmod +x /workspace/chromedriver
 
-CMD ["python3 src/main.py"]
+CMD ["python3 /workspace/src/main.py"]
