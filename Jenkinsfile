@@ -7,13 +7,13 @@ pipeline {
         sh 'echo working well?'
       }
     }
-    stage('launch main.py') {
-      agent { dockerfile true }
-      steps {
-        sh 'chmod 755 chromedriver'
-        sh 'python3 src/main.py'
-        sh 'ls -alh'
-      }
-    }
+//     stage('launch main.py') {
+//       agent { dockerfile true }
+//       steps {
+//         sh 'chmod 755 chromedriver'
+//         sh 'python3 src/main.py'
+//         sh 'ls -alh'
+//       }
+//     }
   }
 }
