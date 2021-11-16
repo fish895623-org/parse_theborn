@@ -4,7 +4,7 @@ pipeline {
     stage('Chromedriver executable') {
       agent any
       steps {
-        sh 'docker build -t parse -f Dockerfile .'
+        sh 'docker build .'
       }
     }
 //     stage('launch main.py') {
