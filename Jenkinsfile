@@ -10,5 +10,15 @@ pipeline {
         sh "echo abcd"
       }
     }
+    stage('test2') {
+      agent { dockerfile true }
+      stages {
+        stage('testing dockerfile') {
+          steps {
+            sh 'working well?'
+          }
+        }
+      }
+    }
   }
 }
