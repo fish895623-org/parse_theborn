@@ -1,12 +1,6 @@
 pipeline {
   agent none
   stages {
-    stage('checkout') {
-      agent any
-      steps {
-        checkout scm
-      }
-    }
     stage('test2') {
       stages {
         stage('Chromedriver executable') {
