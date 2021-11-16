@@ -13,12 +13,12 @@ pipeline {
           agent { dockerfile true }
           steps {
             sh 'echo working well?'
-            sh 'chmod 755 chromedriver'
           }
         }
         stage('launch main.py') {
           agent { dockerfile true }
           steps {
+            sh 'chmod 755 chromedriver'
             sh 'python3 src/main.py'
             sh 'ls -alh'
           }
