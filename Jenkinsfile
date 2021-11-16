@@ -14,7 +14,6 @@ pipeline {
           steps {
             sh 'echo working well?'
             sh 'chmod +x chromedriver'
-            sh 'python3'
           }
         }
       }
