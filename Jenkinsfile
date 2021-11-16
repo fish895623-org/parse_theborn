@@ -1,15 +1,13 @@
 pipeline {
   agent none
   stages {
-//     stage('Testing') {
-//       agent any
-//       steps {
-//         // Testing
-//         checkout scm
-//         sh "ls -alh"
-//         sh "echo abcd"
-//       }
-//     }
+    stage('Testing') {
+      agent any
+      steps {
+        sh "ls -alh"
+        sh "echo abcd"
+      }
+    }
     stage('test2') {
       stages {
         stage('testing dockerfile') {
