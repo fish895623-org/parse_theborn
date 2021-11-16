@@ -4,7 +4,7 @@ pipeline {
     stage('Chromedriver executable') {
       agent any
       steps {
-        sh 'docker build .'
+        sh 'time docker image build --no-cache .'
       }
     }
 //     stage('launch main.py') {
