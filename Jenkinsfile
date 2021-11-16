@@ -13,7 +13,7 @@ pipeline {
           agent { dockerfile true }
           steps {
             sh 'echo working well?'
-            sh 'chmod +x chromedriver'
+            sh 'chmod 755 chromedriver'
           }
         }
         stage('launch main.py') {
