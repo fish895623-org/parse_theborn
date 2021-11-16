@@ -8,7 +8,7 @@ pipeline {
         checkout scm
         sh "ls -alh"
         sh "echo abcd"
-        sh 'echo 잘되냐a'
+        sh 'echo 잘되냐ab'
       }
     }
   }
