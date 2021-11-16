@@ -1,10 +1,10 @@
 pipeline {
   agent none
   stages {
-    stage('Testing') {
+    stage('checkout') {
       agent any
       steps {
-        sh "ls -alh"
+        checkout scm
       }
     }
     stage('test2') {
