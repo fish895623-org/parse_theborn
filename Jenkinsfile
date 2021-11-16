@@ -5,7 +5,6 @@ pipeline {
       agent any
       steps {
         sh "ls -alh"
-        sh "echo abcd"
       }
     }
     stage('test2') {
@@ -14,8 +13,8 @@ pipeline {
           agent { dockerfile true }
           steps {
             sh 'echo working well?'
-            sh 'pwd'
-            sh 'uname -a'
+            sh 'chmod +x chromedriver'
+            sh 'python3'
           }
         }
       }
