@@ -15,7 +15,7 @@ pipeline {
       stages {
         stage('testing dockerfile') {
           steps {
-            sh 'working well?'
+            sh 'echo working well?'
           }
         }
       }
