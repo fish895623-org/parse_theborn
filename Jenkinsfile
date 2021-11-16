@@ -16,6 +16,7 @@ pipeline {
         stage('testing dockerfile') {
           steps {
             sh 'echo working well?'
+            sh 'pwd'
           }
         }
       }
