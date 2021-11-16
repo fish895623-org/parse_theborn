@@ -17,6 +17,7 @@ pipeline {
           steps {
             sh 'echo working well?'
             sh 'pwd'
+            sh 'uname -a'
           }
         }
       }
