@@ -1,4 +1,4 @@
-RUN ubuntu:20.04
+RUN ubuntu:focal
 
 COPY requirements.txt /tmp/requirements.txt
 RUN apt-get update && apt-get install -y python3.8 python3-pip chromium-chromedriver
