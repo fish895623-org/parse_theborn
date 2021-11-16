@@ -19,6 +19,6 @@ jobs:
     - uses: fish895623/android-sdk-action@master
       id: hello
       with:
-        who-to-greet: 'Mo helloj?'
+        version: '29'
     - name: Get output
-      run: echo "${{ steps.hello.outputs.time }}"
+      run: echo "${{ steps.hello.outputs.version }}"
