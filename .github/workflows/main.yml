@@ -14,8 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: testing
-      run: echo test
     - uses: fish895623/android-sdk-action@master
       id: hello
       with:
