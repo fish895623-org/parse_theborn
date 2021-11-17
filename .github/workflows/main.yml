@@ -19,13 +19,14 @@ jobs:
           python-version: 3.7
       - name: install black
         run: pip install --no-cache-dir black
+      - name: run black
+        run: black .
       - name: run main.py
         run: |
           pip install --no-cache-dir -r requirements.txt
           python3 main.py ${{ secrets.NAVER_KEY }} ${{ secrets.NAVER_SECRET_KEY }}
       - name: If needed, commit black changes to the pull request
         run: |
-          black .
           git config --global user.name 'autoblack'
           git config --global user.email 'fish895623@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
