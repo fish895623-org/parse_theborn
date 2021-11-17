@@ -20,5 +20,3 @@ jobs:
       id: hello
       with:
         version: '29'
-    - name: Get output
-      run: echo "${{ steps.hello.outputs.version }}"
