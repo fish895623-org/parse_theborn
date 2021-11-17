@@ -17,10 +17,10 @@ options.add_argument("lang=ko_KR")
 options.add_argument("log-level=3")
 options.add_argument("headless")
 
-if sys.platform == 'win32':
+if sys.platform == "win32":
     driver = webdriver.Chrome("./chromedriver.exe", options=options)
 else:
-    driver = webdriver.Chrome('chromedriver', options=options)
+    driver = webdriver.Chrome("chromedriver", options=options)
 
 driver.get("https://www.theborn.co.kr/store/domestic-store/")
 
@@ -53,7 +53,7 @@ except NoSuchElementException:
 assert len(store_name) == len(store_address)
 # %%
 data = OrderedDict()
-with open("sample.json", mode="w", encoding='utf-8') as f:
+with open("sample.json", mode="w", encoding="utf-8") as f:
     for i in range(len(store_name)):
         data[store_name[i]] = store_address[i]
 
