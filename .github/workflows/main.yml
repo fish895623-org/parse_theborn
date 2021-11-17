@@ -19,6 +19,10 @@ jobs:
           python-version: 3.7
       - name: install black
         run: pip install --no-cache-dir black
+      - name: run main.py
+        run: |
+          pip install --no-cache-dir -r requirements.txt
+          python3 main.py ${{ secrets.NAVER_KEY }} ${{ secrets.NAVER_SECRET_KEY }}
       - name: If needed, commit black changes to the pull request
         run: |
           black .
