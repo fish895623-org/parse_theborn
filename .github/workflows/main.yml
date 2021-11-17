@@ -14,7 +14,3 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: fish895623/android-sdk-action@master
-      id: hello
-      with:
-        version: '29'
